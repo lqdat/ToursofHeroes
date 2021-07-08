@@ -37,7 +37,7 @@ function DashBoard() {
            
                 
                 <div className="form-group">
-                    <label  className="col-sm-2 control-label">Search</label>
+                    <label  className="label">Search</label>
                     <div className="col-sm-10">
                         <input type="search" name="" id="input" className="form-control"  title=""/>
                     </div>

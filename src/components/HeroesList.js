@@ -9,15 +9,9 @@ function HeroesList() {
 
 
     const [list, setLish] = useState(ListHeroes);
-    const HandleDel = (id) => {
-        const position = list.findIndex(hero => id === hero.id)
+    
 
-        list.splice(position, 1)
-
-
-    }
-
-    let element = list.map((newArr, index) => {
+    let element = ListHeroes.map((newArr, index) => {
         return (
 
             <li className="li" key={index}>
@@ -29,7 +23,14 @@ function HeroesList() {
             </li>
         )
     });
-    var a = list.slice(ListHeroes.length - 1, ListHeroes.length)
+    const HandleDel = (id) => {
+        const position = ListHeroes.findIndex(hero => id === hero.id)
+
+        setLish(ListHeroes.splice(position, 1))
+
+
+    }
+    var a = ListHeroes.slice(ListHeroes.length - 1, ListHeroes.length)
     var lastid = a[0].id
     const [h, setH] = useState();
     const onHeroName = (y) => {
@@ -43,10 +44,10 @@ function HeroesList() {
         console.log(h)
         if (h !== null) {
             var rs1 = { id: lastid + 1, name: h }
-            var found = list.includes(rs1);
+            var found = ListHeroes.includes(rs1);
             console.log(found)
             if (found === false) {
-                setLish(list.push(rs1))
+                setLish(ListHeroes.push(rs1))
 
             }
         }
