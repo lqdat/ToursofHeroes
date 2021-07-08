@@ -1,7 +1,7 @@
 import { Component } from "react";
 import DashBoard from "./DashBoard";
 import HeroesList from './HeroesList';
-import styled from "styled-components";
+import './style.css'
 
 import {
     BrowserRouter as Router,

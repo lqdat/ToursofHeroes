@@ -8,7 +8,7 @@ import './style.css'
 function HeroesList() {
 
 
-    const [list, setLish] = useState(ListHeroes);
+    const [list, setLish] = useState([...ListHeroes]);
     
 
     let element = ListHeroes.map((newArr, index) => {
@@ -42,11 +42,11 @@ function HeroesList() {
 
     const handleAdd = () => {
         console.log(h)
-        if (h !== null) {
+        if (!h) {
             var rs1 = { id: lastid + 1, name: h }
-            var found = ListHeroes.includes(rs1);
+            var found = ListHeroes.includes(ListHeroes.h);
             console.log(found)
-            if (found === false) {
+            if (!found ) {
                 setLish(ListHeroes.push(rs1))
 
             }
